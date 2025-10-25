@@ -1,14 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>HW3</title>
+    <title>Квиз</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
 </head>
 <body>
-    <div id="app">
-        
+    <div class="container">
+        <h1>Квиз</h1>
+
+        <input type="checkbox" id="show-answers" class="toggle">
+        <div class="question" id="q1">
+            <h2>Как изменить отступы внутри элемента?</h2>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1"> margin</label>
+                <label class="option"><input type="radio" name="q1"> spacing</label>
+                <label class="option" id="correct"><input type="radio" name="q1"> padding</label>
+            </div>
+        </div>
+
+        <div class="question" id="q2">
+            <h2>Какой тег используется для создания ненумерованного списка?</h2>
+            <input type="text" placeholder="Введите название тега" id="correct-q2">
+        </div>
+
+        <div class="question" id="q3">
+            <h2>Какие из этих CSS-свойств НЕ влияют на положение элемента в потоке?</h2>
+            <div class="options">
+                <label class="option"><input type="checkbox" name="q3"> position: absolute</label>
+                <label class="option"><input type="checkbox" name="q3"> float: left</label>
+                <label class="option" id="correct"><input type="checkbox" name="q3"> opacity: 0</label>
+                <label class="option"><input type="checkbox" name="q3"> display: none</label>
+                <label class="option" id="correct"><input type="checkbox" name="q3"> visibility: hidden</label>
+                <label class="option" id="correct"><input type="checkbox" name="q3"> color: red</label>
+            </div>
+        </div>
+
+        <div class="question" id="q4">
+            <h2>Что выведет этот CSS код?</h2>
+            <div class="code">div { color: red !important; }<br>div { color: blue; }</div>
+            <div class="options">
+                <label class="option" id="correct"><input type="radio" name="q4"> Текст будет красным</label>
+                <label class="option"><input type="radio" name="q4"> Текст будет синим</label>
+                <label class="option"><input type="radio" name="q4"> Будет ошибка</label>
+            </div>
+        </div>
+
+        <div class="question" id="q5">
+            <h2>Какой тег сделает текст жирным и семантически важным?</h2>
+            <div class="options">
+                <label class="option" id="correct"><input type="radio" name="q5"> &lt;strong&gt;</label>
+                <label class="option"><input type="radio" name="q5"> &lt;bold&gt;</label>
+                <label class="option"><input type="radio" name="q5"> &lt;fat&gt;</label>
+            </div>
+        </div>
+
+        <div class="question" id="q6">
+            <h2>Какой CSS-селектор имеет наивысший приоритет?</h2>
+            <div class="options">
+                <label class="option"><input type="radio" name="q6"> .my-class</label>
+                <label class="option"><input type="radio" name="q6"> div</label>
+                <label class="option" id="correct"><input type="radio" name="q6"> Инлайн-стиль</label>
+            </div>
+        </div>
+
+        <div class="question" id="q7">
+            <h2>Какой оператор используется для строгого сравнения в JavaScript?</h2>
+            <input type="text" placeholder="Введите ответ" id="correct">
+        </div>
+
+        <div class="question" id="q8">
+            <h2>Какие из этих тегов являются семантическими?</h2>
+            <div class="options">
+                <label class="option" id="correct"><input type="checkbox" name="q8"> &lt;header&gt;</label>
+                <label class="option"><input type="checkbox" name="q8"> &lt;div&gt;</label>
+                <label class="option" id="correct"><input type="checkbox" name="q8"> &lt;article&gt;</label>
+                <label class="option" id="correct"><input type="checkbox" name="q8"> &lt;h1&gt;</label>
+            </div>
+        </div>
+
+        <div class="question" id="q9">
+            <h2>Без чего не может начинаться любой HTML файл?</h2>
+            <input type="text" placeholder="Введите ответ" id="correct">
+        </div>
+        <label for="show-answers" class="toggle-btn"></label>
     </div>
 </body>
 </html>
