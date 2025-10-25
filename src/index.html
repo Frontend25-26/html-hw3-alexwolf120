@@ -1,14 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>HW3</title>
+    <title>Квиз</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
 </head>
+
 <body>
-    <div id="app">
-        
+    <div class="container" id="top">
+        <h1>Квиз</h1>
+
+        <input type="checkbox" id="show-answers" class="toggle">
+
+        <div class="question">
+            <div class="question-header">
+                <h2>Как изменить отступы внутри элемента?</h2>
+            </div>
+            <div class="options">
+                <label class="incorrect"><input type="radio" name="q1"> margin</label>
+                <label class="incorrect"><input type="radio" name="q1"> spacing</label>
+                <label class="correct"><input type="radio" name="q1"> padding</label>
+            </div>
+            <div class="answer">Правильный ответ: padding - внутренний отступ между содержимым и границей</div>
+        </div>
+
+        <div class="question">
+            <div class="question-header">
+                <h2>Какой тег используется для создания ненумерованного списка?</h2>
+            </div>
+            <input type="text" placeholder="Введите название тега">
+            <div class="answer">Правильный ответ: ul<br>&lt;ul&gt; создает ненумерованный список</div>
+        </div>
+
+        <div class="question">
+            <div class="question-header">
+                <h2>Какие из этих CSS-свойств НЕ влияют на положение элемента в потоке? (выберите все подходящие)</h2>
+            </div>
+            <div class="options">
+                <label class="incorrect"><input type="checkbox" name="q3"> position: absolute</label>
+                <label class="incorrect"><input type="checkbox" name="q3"> float: left</label>
+                <label class="correct"><input type="checkbox" name="q3"> opacity: 0</label>
+                <label class="incorrect"><input type="checkbox" name="q3"> display: none</label>
+                <label class="correct"><input type="checkbox" name="q3"> visibility: hidden</label>
+                <label class="correct"><input type="checkbox" name="q3"> color: red</label>
+            </div>
+            <div class="answer">
+                Правильные ответы: visibility: hidden, opacity: 0, color: red<br>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-header">
+                <h2>Что выведет этот CSS код?</h2>
+            </div>
+            <div class="code">div { color: red !important; }<br>div { color: blue; }</div>
+            <div class="options">
+                <label class="correct"><input type="radio" name="q4"> Текст будет красным</label>
+                <label class="incorrect"><input type="radio" name="q4"> Текст будет синим</label>
+                <label class="incorrect"><input type="radio" name="q4"> Будет ошибка</label>
+            </div>
+            <div class="answer">Правильный ответ: Текст будет красным<br>!important имеет высший приоритет</div>
+        </div>
+
+        <div class="question" >
+            <div class="question-header">
+                <h2>Какой тег сделает текст жирным и семантически важным?</h2>
+            </div>
+            <div class="options">
+                <label class="correct"><input type="radio" name="q5"> &lt;strong&gt;</label>
+                <label class="incorrect"><input type="radio" name="q5"> &lt;bold&gt;</label>
+                <label class="incorrect"><input type="radio" name="q5"> &lt;fat&gt;</label>
+            </div>
+            <div class="answer">Правильный ответ: &lt;strong&gt; - семантический тег важности</div>
+        </div>
+
+        <div class="question" >
+            <div class="question-header">
+                <h2>Какой CSS-селектор имеет наивысший приоритет?</h2>
+            </div>
+            <div class="options">
+                <label class="incorrect"><input type="radio" name="q6"> .my-class</label>
+                <label class="incorrect"><input type="radio" name="q6"> div</label>
+                <label class="correct"><input type="radio" name="q6"> Инлайн-стиль</label>
+            </div>
+            <div class="answer">Правильный ответ: Инлайн-стиль имеет наивысший приоритет</div>
+        </div>
+
+        <div class="question" >
+            <div class="question-header">
+                <h2>Какой оператор используется для строгого сравнения в JavaScript?</h2>
+            </div>
+            <input type="text" placeholder="Введите ответ">
+            <div class="answer">Правильный ответ: ===</div>
+        </div>
+
+        <div class="question" >
+            <div class="question-header">
+                <h2>Какие из этих тегов являются семантическими?</h2>
+            </div>
+            <div class="options">
+                <label class="correct"><input type="checkbox" name="q8"> &lt;header&gt;</label>
+                <label class="incorrect"><input type="checkbox" name="q8"> &lt;div&gt;</label>
+                <label class="correct"><input type="checkbox" name="q8"> &lt;article&gt;</label>
+                <label class="correct"><input type="checkbox" name="q8"> &lt;h1&gt;</label>
+            </div>
+            <div class="answer">Правильные ответы: &lt;header&gt;, &lt;article&gt;, &lt;h1&gt;</div>
+        </div>
+
+        <div class="question">
+            <div class="question-header">
+                <h2>Без чего не может начинаться любой HTML файл?</h2>
+            </div>
+            <input type="text" placeholder="Введите ответ">
+            <div class="answer">Правильный ответ: &lt;!DOCTYPE html&gt;</div>
+        </div>
+        <label for="show-answers" class="toggle-btn">
+        </label>
     </div>
+
+    <footer>
+        <nav><a href="#top" class="nav-link">↑ Наверх</a></nav>
+    </footer>
 </body>
+
 </html>

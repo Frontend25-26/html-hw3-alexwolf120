@@ -1,6 +1,166 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
-    background: #292929;
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url("img/quiz.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    counter-reset: count;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto 40px;
+    padding: 12px 24px;
+    background: #4facfe;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.text-hide {
+    display: none;
+}
+
+.question {
+    background: #f8fafc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+    padding-left: 60px;
+}
+
+.question::before {
+    content: counter(count);
+    counter-increment: count;
+    background: #4facfe;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+
+}
+
+.question-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.code {
+    background: #2d3748;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-family: 'Courier New', monospace;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.options input {
+    margin-right: 10px;
+}
+
+.question input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: #e2e8f0;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.answer {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #d1fae5;
+    border-radius: 8px;
+}
+.nav-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background: #4a6b8c;
+    color: white;
+    border-radius: 5px;
+}
+
+.toggle:checked ~ .question .answer {
+    display: block;
+}
+
+.toggle:checked ~ .question .correct {
+    background: #d1fae5;
+}
+
+.toggle:checked ~ .question .incorrect {
+    background: #fee2e2;
+}
+
+.toggle:checked ~ .toggle-btn .text-show {
+    display: none;
+}
+
+.toggle:checked ~ .toggle-btn .text-hide {
+    display: inline;
+}
+.toggle-btn::before {
+    content: "Проверить";
+}
+.toggle:checked ~ .toggle-btn::before {
+    content: "Скрыть";
 }
